@@ -90,18 +90,16 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="mb-14 md:mb-16 flex flex-col md:flex-row md:items-end gap-6 md:gap-16"
+          className="mb-14 md:mb-16 flex flex-col gap-4"
         >
-          <div>
-            <span className="block text-brand-500 text-xs font-semibold tracking-[0.12em] uppercase mb-3">
-              Áreas de atuação
-            </span>
-            <h2 className="font-extrabold text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.1] tracking-tight text-forest max-w-[380px]">
-              Nossas soluções em{" "}
-              <span className="text-brand-500">conformidade e sustentabilidade</span>
-            </h2>
-          </div>
-          <p className="text-forest/60 text-[15px] leading-relaxed max-w-[340px] md:mb-1">
+          <span className="block text-brand-500 text-xs font-semibold tracking-[0.12em] uppercase">
+            Áreas de atuação
+          </span>
+          <h2 className="font-extrabold text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.15] tracking-tight text-forest">
+            Nossas soluções em<br />
+            <span className="text-brand-500">conformidade e sustentabilidade</span>
+          </h2>
+          <p className="text-forest/60 text-[15px] leading-relaxed max-w-[480px]">
             Seis frentes integradas para empresas que buscam crescimento sustentável,
             segurança jurídica e conformidade regulatória.
           </p>
@@ -126,7 +124,7 @@ export default function Services() {
               className="group bg-white border border-gray-100 rounded-2xl p-7 flex flex-col gap-5 shadow-card cursor-default transition-colors hover:border-brand-200"
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="font-bold text-[1.2rem] leading-snug tracking-tight text-forest group-hover:text-brand-600 transition-colors">
+                <h3 className="font-bold text-[1.2rem] leading-snug tracking-tight text-forest group-hover:text-brand-600 transition-colors h-[3.3rem] line-clamp-2">
                   {s.titulo}
                 </h3>
                 <span className="flex-none text-xs font-bold text-brand-400 bg-brand-50 rounded-lg px-2.5 py-1 tabular-nums">
@@ -137,13 +135,21 @@ export default function Services() {
               <ul className="flex flex-col divide-y divide-gray-100">
                 {s.itens.map((item, i) => (
                   <li key={i} className="flex gap-3 items-start py-3">
-                    <span className="flex-none mt-[5px] w-5 h-5 rounded-md bg-brand-500 text-white flex items-center justify-center text-[10px] font-bold tabular-nums">
-                      {i + 1}
-                    </span>
+                    <span className="flex-none mt-[7px] w-2 h-2 rounded-full bg-brand-500" />
                     <span className="text-[13.5px] leading-[1.55] text-forest/70">{item}</span>
                   </li>
                 ))}
               </ul>
+
+              <a
+                href="#contato"
+                className="mt-auto text-brand-500 hover:text-brand-600 text-[13px] font-semibold flex items-center gap-1.5 group/cta transition-colors"
+              >
+                Falar com equipe
+                <svg className="w-3.5 h-3.5 transition-transform group-hover/cta:translate-x-0.5" fill="none" viewBox="0 0 16 16">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
             </motion.div>
           ))}
         </motion.div>

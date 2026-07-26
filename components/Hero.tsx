@@ -6,30 +6,22 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-forest overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-forest via-[#1a3a26] to-[#0d1e14]" />
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(111,204,164,1) 1px, transparent 1px), linear-gradient(90deg, rgba(111,204,164,1) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
+        {/* Mobile background */}
+        <img
+          src="/background mobile.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[80px]" />
-        <div className="absolute bottom-0 -left-24 w-[400px] h-[400px] bg-brand-700/15 rounded-full blur-[80px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-500/5 rounded-full blur-[120px]" />
+        {/* Desktop background */}
+        <img
+          src="/background desktop.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #12271b, transparent 50%)" }} />
       </div>
 
       <div className="relative z-10 container-site py-32 md:py-40 w-full">
-        <motion.span
-          className="inline-block text-brand-300 text-xs font-semibold tracking-[0.14em] uppercase mb-7"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
-        >
-          Horgânico · Soluções Ecológicas
-        </motion.span>
-
         <motion.h1
           className="text-white font-extrabold text-[clamp(2.6rem,6vw,4.5rem)] leading-[1.06] tracking-tight max-w-[680px]"
           initial={{ opacity: 0, y: 50 }}

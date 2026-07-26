@@ -1,31 +1,30 @@
 "use client";
 
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
 
 const diferenciais = [
   {
     num: "01",
     titulo: "Solução multidisciplinar 360°",
     texto:
-      "Um único parceiro para todas as demandas de licenciamento, segurança do trabalho, vigilância sanitária e defesa legal — SST, ambiental, sanitário e jurídico integrados.",
-    gradient: "from-[#0d1e14] via-[#1a3a26] to-[#12271b]",
-    accent: "#6fcca4",
+      "Engenharia ambiental, segurança do trabalho e vigilância sanitária integrados em um único parceiro. Do licenciamento ambiental à defesa de autos de infração — sua empresa atendida de ponta a ponta, sem fragmentar fornecedores.",
+    imagem: "/solucao 360.jpg",
   },
   {
     num: "02",
     titulo: "Foco em resultados e economia",
     texto:
-      "Redução real de custos tributários sobre a folha e prevenção de multas operacionais, com base técnica e jurídica sólida.",
-    gradient: "from-[#12271b] via-[#1e4030] to-[#0d1e14]",
-    accent: "#3aad78",
+      "Eliminamos multas ambientais, sanitárias e trabalhistas antes que aconteçam. Atuação preventiva que reduz passivos fiscais, protege a folha de pagamento e transforma compliance em vantagem competitiva.",
+    imagem: "/economia_.jpg",
   },
   {
     num: "03",
     titulo: "Práticas ESG com impacto real",
     texto:
-      "Conexão entre o setor corporativo e iniciativas socioambientais e cooperativas, para uma sustentabilidade rentável e transparente.",
-    gradient: "from-[#0a1f12] via-[#165f38] to-[#12271b]",
-    accent: "#6fcca4",
+      "Implementamos estratégias ESG com indicadores mensuráveis: gestão de resíduos, redução de emissões e responsabilidade social. Sustentabilidade que atrai investidores, abre mercados e gera valor verificável.",
+    imagem: "/ESG.jpg",
   },
 ];
 
@@ -36,10 +35,16 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+  },
 };
 
 export default function Differentials() {
+  const [hovered, setHovered] = useState<string | null>(null);
+
   return (
     <section id="diferenciais" className="py-24 md:py-32 bg-[#f8faf7]">
       <div className="container-site">
@@ -69,36 +74,52 @@ export default function Differentials() {
           viewport={{ once: true, margin: "-60px" }}
         >
           {diferenciais.map((d) => (
+            <motion.div key={d.num} variants={cardVariants} className="relative">
             <motion.div
-              key={d.num}
-              variants={cardVariants}
-              whileHover={{ y: -8, transition: { duration: 0.25 } }}
-              className={`group relative overflow-hidden rounded-2xl min-h-[360px] md:min-h-[420px] flex flex-col justify-end bg-gradient-to-br ${d.gradient} shadow-xl shadow-forest/20 cursor-default`}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              onHoverStart={() => setHovered(d.num)}
+              onHoverEnd={() => setHovered(null)}
+              className="relative bg-[#0d1e14] rounded-2xl overflow-hidden flex flex-col shadow-xl shadow-forest/20 cursor-default"
             >
-              <motion.div
-                className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/5 transition-colors duration-300"
-              />
-
-              <div className="absolute top-6 right-6 text-xs font-bold tabular-nums"
-                style={{ color: d.accent }}>
-                {d.num}
+              {/* Imagem inset */}
+              <div className="m-3 rounded-xl overflow-hidden flex-shrink-0">
+                <img
+                  src={d.imagem}
+                  alt={d.titulo}
+                  className="w-full h-[200px] md:h-[220px] object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+                  style={{ transform: hovered === d.num ? "scale(1.06)" : "scale(1)" }}
+                />
               </div>
 
-              <div
-                className="absolute inset-x-0 bottom-0 h-2/3"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(18,39,27,0.97) 0%, rgba(18,39,27,0.7) 60%, transparent 100%)",
-                }}
-              />
-
-              <div className="relative z-10 p-7 md:p-8">
-                <h3 className="font-bold text-[1.15rem] leading-snug tracking-tight mb-3"
-                  style={{ color: d.accent }}>
+              {/* Texto */}
+              <div className="px-6 pt-3 pb-5 flex flex-col gap-2 flex-1">
+                <h3 className="font-bold text-[1.1rem] leading-snug tracking-tight text-[#008801]">
                   {d.titulo}
                 </h3>
-                <p className="text-white/70 text-[14px] leading-[1.65]">{d.texto}</p>
+                <p className="text-white/60 text-[13.5px] leading-[1.65]">{d.texto}</p>
               </div>
+
+              {/* CTA hover */}
+              <AnimatePresence>
+                {hovered === d.num && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.22 }}
+                    className="px-6 pb-6"
+                  >
+                    <a
+                      href="#contato"
+                      className="block w-full text-center bg-gradient-to-r from-[#004d00] to-[#008801] hover:from-[#003800] hover:to-[#006801] text-white text-sm font-semibold py-2.5 rounded-full transition-colors duration-200"
+                    >
+                      Solicitar Diagnóstico
+                    </a>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
             </motion.div>
           ))}
         </motion.div>

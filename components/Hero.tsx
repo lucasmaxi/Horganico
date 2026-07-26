@@ -34,7 +34,7 @@ export default function Hero() {
           className="text-white font-extrabold text-[clamp(2.6rem,6vw,4.5rem)] leading-[1.06] tracking-tight max-w-[680px]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.85, delay: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
         >
           Protegemos sua empresa, seus trabalhadores e o meio ambiente.
         </motion.h1>

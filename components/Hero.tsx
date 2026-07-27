@@ -31,7 +31,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
         >
-          Protegemos sua empresa,<br className="md:hidden" />seus trabalhadores e<br />o meio ambiente.
+          <span className="md:whitespace-nowrap">Protegemos sua empresa,</span><br />seus trabalhadores e<br />o meio ambiente.
         </motion.h1>
 
         <motion.p
@@ -40,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.58 }}
         >
-          Soluções técnicas, jurídicas e sustentáveis<br />em uma única plataforma: engenharia ambiental,<br />segurança do trabalho, vigilância sanitária,<br />defesa de multas e gestão estratégica.
+          Soluções técnicas, jurídicas e sustentáveis<br className="md:hidden" />em uma única plataforma: engenharia ambiental,<br className="md:hidden" />segurança do trabalho, vigilância sanitária,<br className="md:hidden" />defesa de multas e gestão estratégica.
         </motion.p>
 
         <motion.div
@@ -64,7 +64,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
+          className="absolute -bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}

@@ -31,7 +31,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
         >
-          Protegemos sua empresa,<br />seus trabalhadores e<br />o meio ambiente.
+          Protegemos sua empresa,<br className="md:hidden" />seus trabalhadores e<br />o meio ambiente.
         </motion.h1>
 
         <motion.p

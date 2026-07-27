@@ -18,12 +18,15 @@ export default function Hero() {
           alt=""
           className="absolute inset-0 w-full h-full object-cover hidden md:block"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #12271b, transparent 50%)" }} />
+        {/* Gradiente mobile: cima → baixo */}
+        <div className="absolute inset-0 md:hidden" style={{ background: "linear-gradient(to bottom, #12271b, transparent 100%)" }} />
+        {/* Gradiente desktop: esquerda → direita */}
+        <div className="absolute inset-0 hidden md:block" style={{ background: "linear-gradient(to right, #12271b, transparent 50%)" }} />
       </div>
 
       <div className="relative z-10 container-site py-32 md:py-40 w-full">
         <motion.h1
-          className="text-white font-extrabold text-[clamp(2.6rem,6vw,4.5rem)] leading-[1.06] tracking-tight max-w-[680px]"
+          className="text-white font-extrabold text-[clamp(1.8rem,4vw,3rem)] leading-[1.12] tracking-tight max-w-[580px]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
@@ -32,7 +35,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-white/70 text-lg leading-[1.75] max-w-[520px] mt-8"
+          className="text-white/70 text-[15px] leading-[1.7] max-w-[460px] mt-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.58 }}
@@ -54,7 +57,7 @@ export default function Hero() {
           </a>
           <a
             href="#servicos"
-            className="text-white/80 hover:text-white border border-white/20 hover:border-white/50 font-medium px-7 py-3.5 rounded-xl transition-all duration-200"
+            className="text-white/85 hover:text-white border border-white/25 hover:border-white/50 font-medium px-7 py-3.5 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/15 transition-all duration-200"
           >
             Conheça os serviços
           </a>

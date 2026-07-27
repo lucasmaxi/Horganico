@@ -38,7 +38,7 @@ const itemVariants = {
 
 export default function About() {
   return (
-    <section id="quem-somos" className="relative bg-forest py-24 md:py-32 overflow-hidden">
+    <section id="quem-somos" className="relative bg-forest pt-16 pb-24 md:pt-[5.5rem] md:pb-32 overflow-hidden">
       <img
         src="/background quem somos.jpg"
         alt=""
@@ -58,8 +58,9 @@ export default function About() {
             Quem somos
           </span>
           <h2 className="font-extrabold text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.15] tracking-tight text-white mx-auto">
-            A Horgânico e sua missão em<br />
-            <span className="text-white">sustentabilidade</span>
+            A Horgânico<br className="md:hidden" />
+            <span className="md:hidden"> e sua missão<br />em sustentabilidade</span>
+            <span className="hidden md:inline"> e sua missão em<br />sustentabilidade</span>
           </h2>
         </motion.div>
 

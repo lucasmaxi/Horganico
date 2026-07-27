@@ -37,7 +37,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Navbar + dropdown */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 md:pt-5 pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 md:pt-5 pointer-events-none" style={{ transform: "translateZ(0)" }}>
         <div className="pointer-events-auto w-full max-w-[1200px] flex flex-col">
 
           {/* Header */}

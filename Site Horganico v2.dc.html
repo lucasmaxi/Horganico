@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-71ec7a11-a785-492f-bb3f-8bbfbadb605a/styles.css">
+<script src="_ds/modernist-71ec7a11-a785-492f-bb3f-8bbfbadb605a/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+:root{
+  --verde:#1e7d4b;
+  --color-accent:var(--verde);
+  --color-accent-100:color-mix(in oklab, var(--verde) 10%, #f7f8f6);
+  --color-accent-200:color-mix(in oklab, var(--verde) 22%, #f7f8f6);
+  --color-accent-300:color-mix(in oklab, var(--verde) 40%, #f7f8f6);
+  --color-accent-400:color-mix(in oklab, var(--verde) 70%, #f7f8f6);
+  --color-accent-500:var(--verde);
+  --color-accent-600:color-mix(in oklab, var(--verde) 88%, #08130c);
+  --color-accent-700:color-mix(in oklab, var(--verde) 70%, #08130c);
+  --color-accent-800:color-mix(in oklab, var(--verde) 55%, #08130c);
+  --color-accent-900:color-mix(in oklab, var(--verde) 38%, #08130c);
+  --color-accent-2-100:var(--color-accent-100);--color-accent-2-200:var(--color-accent-200);
+  --color-accent-2-300:var(--color-accent-300);--color-accent-2-500:var(--verde);
+  --color-accent-2-700:var(--color-accent-700);--color-accent-2-900:var(--color-accent-900);
+  --escuro:#12271b;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:14px;
+}
+.btn,.input,.tag{border-radius:var(--radius-md)}
+html{scroll-behavior:smooth}
+body{margin:0;text-wrap:pretty}
+a{color:var(--color-accent-700)} a:hover{color:var(--color-accent)}
+#banner-hero::part(empty){padding-left:58%}
+@media (max-width:760px){#banner-hero::part(empty){padding-left:12px}}
+</style>
+</helmet>
+
+<nav class="nav" style="padding-inline:max(clamp(20px,5vw,72px),calc((100% - 1200px)/2 + clamp(20px,5vw,72px)))">
+  <span class="nav-brand">Horgânico</span>
+  <a href="#servicos" style="white-space:nowrap">Serviços</a>
+  <a href="#quem-somos" style="white-space:nowrap">Quem somos</a>
+  <a href="#diferenciais" style="white-space:nowrap">Diferenciais</a>
+  <a href="#contato" style="white-space:nowrap">Contato</a>
+  <a href="#contato" class="btn btn-primary" style="text-decoration:none">Diagnóstico gratuito</a>
+</nav>
+
+<section style="padding:20px 20px 0" data-screen-label="Hero">
+    <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--escuro);min-height:520px;display:flex;align-items:stretch">
+      <image-slot id="banner-hero" shape="rect" placeholder="Imagem do banner (campo, floresta, indústria…)" style="position:absolute;inset:0;width:100%;height:100%;color:#e8efe9"></image-slot>
+      <div style="position:relative;z-index:1;background:linear-gradient(100deg, color-mix(in srgb, var(--escuro) 92%, transparent) 0%, color-mix(in srgb, var(--escuro) 72%, transparent) 45%, transparent 68%);flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,72px);pointer-events:none">
+        <div style="pointer-events:auto;max-width:620px;color:#f3f6f2">
+          <span style="display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-300);margin-bottom:18px">Horgânico · Soluções Ecológicas</span>
+          <h1 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(32px,4.4vw,56px);line-height:1.08;letter-spacing:-0.02em;margin:0">Protegemos sua empresa, seus trabalhadores e o meio ambiente.</h1>
+          <p style="font-size:16px;line-height:27px;margin:22px 0 0;max-width:52ch;color:color-mix(in srgb, #f3f6f2 85%, transparent)">Soluções técnicas, jurídicas e sustentáveis em uma única plataforma: engenharia ambiental, segurança do trabalho, vigilância sanitária, defesa de multas e gestão estratégica de negócios.</p>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:30px">
+            <a href="#contato" class="btn btn-primary" style="text-decoration:none">Solicite um diagnóstico gratuito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
+
+  <section id="servicos" style="padding:84px 0 64px" data-screen-label="Serviços">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px clamp(24px,4vw,72px);align-items:end;margin-bottom:44px">
+      <div>
+        <span style="display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:12px">Serviços</span>
+        <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0">Nossas soluções em <span style="color:var(--color-accent-700)">conformidade e sustentabilidade</span></h2>
+      </div>
+      <p style="font-size:14.5px;line-height:24px;margin:0;color:color-mix(in srgb, var(--color-text) 70%, transparent);max-width:44ch;justify-self:end">Seis frentes integradas para empresas que buscam crescimento sustentável, segurança jurídica e conformidade regulatória.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px">
+      <sc-for list="{{ servicos }}" as="s" hint-placeholder-count="6">
+        <div style="border-radius:var(--radius-lg);padding:28px 28px 32px;display:flex;flex-direction:column;gap:18px;background:{{ s.fundo }}">
+          <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:21px;line-height:1.15;letter-spacing:-0.01em;margin:0;min-height:2.3em">{{ s.titulo }}</h3>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+            <sc-for list="{{ s.itens }}" as="it" hint-placeholder-count="4">
+              <li style="display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-top:1px solid color-mix(in srgb, var(--color-text) 12%, transparent)">
+                <span style="flex:none;width:26px;height:26px;border-radius:var(--radius-sm);background:var(--color-accent);color:#fff;display:grid;place-items:center;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:12px;font-feature-settings:'tnum' 1">{{ it.num }}</span>
+                <span style="font-size:14px;line-height:22px;color:color-mix(in srgb, var(--color-text) 80%, transparent);padding-top:2px">{{ it.texto }}</span>
+              </li>
+            </sc-for>
+          </ul>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:40px">
+      <a href="#contato" class="btn btn-primary" style="text-decoration:none">Entre em contato</a>
+    </div>
+  </section>
+
+  <section id="diferenciais" style="padding:20px 0 84px" data-screen-label="Diferenciais">
+    <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 40px;text-align:center">O que faz da Horgânico <span style="color:var(--color-accent-700)">referência</span><br>em soluções ecológicas</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <sc-for list="{{ diferenciais }}" as="d" hint-placeholder-count="3">
+        <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--escuro);min-height:380px;display:flex;align-items:flex-end">
+          <image-slot id="{{ d.slotId }}" shape="rect" placeholder="{{ d.placeholder }}" style="position:absolute;inset:0;width:100%;height:100%;color:#e8efe9"></image-slot>
+          <div style="position:relative;z-index:1;width:100%;padding:26px;background:linear-gradient(to top, color-mix(in srgb, var(--escuro) 94%, transparent), color-mix(in srgb, var(--escuro) 70%, transparent) 70%, transparent);color:#f3f6f2;pointer-events:none">
+            <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:20px;line-height:1.2;letter-spacing:-0.01em;margin:0;color:var(--color-accent-300)">{{ d.titulo }}</h3>
+            <p style="font-size:14px;line-height:23px;margin:10px 0 0;color:color-mix(in srgb, #f3f6f2 85%, transparent)">{{ d.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+</div>
+
+<section id="quem-somos" style="background:var(--escuro);color:#f3f6f2" data-screen-label="Quem somos">
+  <div style="max-width:1200px;margin:0 auto;padding:84px clamp(20px,4vw,48px)">
+    <span style="display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-300);margin-bottom:12px;text-align:center">Quem somos</span>
+    <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 auto 48px;text-align:center;max-width:22ch">A Horgânico e sua missão em <span style="color:var(--color-accent-300)">sustentabilidade</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:stretch">
+      <div style="border-radius:var(--radius-lg);background:color-mix(in srgb, #f3f6f2 8%, transparent);padding:32px;display:flex;flex-direction:column;gap:16px">
+        <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:20px;margin:0;color:var(--color-accent-300)">Equipe multidisciplinar</h3>
+        <p style="font-size:14.5px;line-height:25px;margin:0;color:color-mix(in srgb, #f3f6f2 82%, transparent)">Engenheiros ambientais, florestais, sanitários e de trânsito, agrônomos, arquitetos e urbanistas, especialistas em saneamento, advogados e consultores em comunicação política.</p>
+      </div>
+      <div style="border-radius:var(--radius-lg);background:color-mix(in srgb, #f3f6f2 8%, transparent);padding:32px;display:flex;flex-direction:column;gap:16px">
+        <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:20px;margin:0;color:var(--color-accent-300)">Nossa missão</h3>
+        <p style="font-size:14.5px;line-height:25px;margin:0;color:color-mix(in srgb, #f3f6f2 82%, transparent)">Unir excelência técnica, rigor científico, sustentabilidade e defesa jurídica para blindar empresas, proteger trabalhadores e impulsionar projetos de alto impacto econômico e ambiental.</p>
+      </div>
+      <div style="border-radius:var(--radius-lg);background:var(--color-accent);padding:32px;display:flex;flex-direction:column;gap:16px">
+        <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:20px;margin:0;color:#fff">Diferenciais estratégicos</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:14.5px;line-height:23px;color:color-mix(in srgb, #fff 92%, transparent)">
+          <li style="display:flex;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:#fff;flex:none;margin-top:8px"></span><span>Solução multidisciplinar 360° — um único parceiro</span></li>
+          <li style="display:flex;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:#fff;flex:none;margin-top:8px"></span><span>Foco em resultados e economia real de custos</span></li>
+          <li style="display:flex;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:#fff;flex:none;margin-top:8px"></span><span>Práticas ESG com impacto socioambiental real</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" data-screen-label="Contato">
+  <div style="max-width:1200px;margin:0 auto;padding:84px clamp(20px,4vw,48px)">
+    <div style="border-radius:var(--radius-lg);background:var(--color-accent-100);padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px clamp(32px,5vw,96px)">
+      <div>
+        <span style="display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:14px">Contato</span>
+        <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-0.015em;margin:0">Sua empresa preparada para <span style="color:var(--color-accent-700)">auditorias, clientes e investidores.</span></h2>
+        <p style="font-size:15.5px;line-height:27px;margin:24px 0 0;max-width:46ch;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Conte-nos a sua demanda — retornamos com uma avaliação inicial e os próximos passos, sem compromisso.</p>
+        <div style="margin-top:40px;display:flex;flex-direction:column;gap:16px;font-size:15px;line-height:24px">
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);flex:none"></span><span><strong>Telefone</strong> — [Seu Telefone]</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);flex:none"></span><span><strong>E-mail</strong> — [Seu E-mail]</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline"><span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);flex:none"></span><span><strong>Área de atendimento</strong> — [Sua Cidade/Região]</span></div>
+        </div>
+      </div>
+      <form style="background:var(--color-bg);color:var(--color-text);padding:36px;display:flex;flex-direction:column;gap:20px;border-radius:var(--radius-lg)" onSubmit="{{ enviar }}">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="field"><label>Nome</label><input class="input" type="text" name="nome" required></div>
+          <div class="field"><label>Empresa</label><input class="input" type="text" name="empresa"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="field"><label>E-mail</label><input class="input" type="email" name="email" required></div>
+          <div class="field"><label>Telefone</label><input class="input" type="tel" name="telefone"></div>
+        </div>
+        <div class="field"><label>Serviço de interesse</label>
+          <select class="input" name="servico">
+            <option>Engenharia Ambiental</option>
+            <option>Vigilância Sanitária e Regulatórios</option>
+            <option>Engenharia de Segurança do Trabalho</option>
+            <option>Estudos e Projetos para Licenciamento</option>
+            <option>Defesa de Multas e Passivos</option>
+            <option>Inteligência e Gestão Estratégica</option>
+          </select>
+        </div>
+        <div class="field"><label>Mensagem</label><textarea class="input" name="mensagem" rows="4" style="resize:vertical"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start">{{ botaoLabel }}</button>
+      </form>
+    </div>
+    <footer style="padding:40px 0 8px;font-size:13px;line-height:24px;color:color-mix(in srgb, var(--color-text) 70%, transparent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <span>© 2026 Horgânico Soluções Ecológicas</span>
+      <span>Engenharia · Sanitário · SST · Jurídico · Gestão</span>
+    </footer>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;tomDeVerde&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#1e7d4b&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#1e7d4b&quot;, &quot;#2e6b3f&quot;, &quot;#0f5f4a&quot;, &quot;#4d7c3f&quot;], &quot;section&quot;: &quot;Aparência&quot;}
+}">
+class Component extends DCLogic {
+  state = { enviado: false };
+  componentDidMount() { this.applyGreen(); }
+  componentDidUpdate() { this.applyGreen(); }
+  applyGreen() {
+    document.documentElement.style.setProperty('--verde', this.props.tomDeVerde ?? '#1e7d4b');
+  }
+  renderVals() {
+    const claro = 'var(--color-bg)';
+    const tinta = 'var(--color-accent-100)';
+    const num = (arr) => arr.map((texto, i) => ({ num: String(i + 1).padStart(2, '0'), texto }));
+    return {
+      botaoLabel: this.state.enviado ? 'Mensagem registrada' : 'Enviar mensagem',
+      enviar: (e) => { e.preventDefault(); this.setState({ enviado: true }); },
+      servicos: [
+        { titulo: 'Engenharia Ambiental', fundo: tinta, itens: num([
+          'Licenciamento Ambiental integral (LP, LI e LO)',
+          'Estudos de Impacto Ambiental (EIA/RIMA, RAP, RAS)',
+          'Gestão de resíduos sólidos (PGRS, PGRCC) e logística reversa',
+          'Outorga de recursos hídricos e Cadastro Ambiental Rural (CAR)'
+        ])},
+        { titulo: 'Vigilância Sanitária e Regulatórios', fundo: claro, itens: num([
+          'Licenciamento sanitário e AFE junto à ANVISA',
+          'Implantação e auditoria de Boas Práticas de Fabricação (BPF)',
+          'Segurança alimentar e qualidade: POP e APPCC',
+          'Registro de produtos e marcas (ANVISA, MAPA, INPI)'
+        ])},
+        { titulo: 'Engenharia de Segurança do Trabalho', fundo: claro, itens: num([
+          'Laudos técnicos: LTCAT, insalubridade e periculosidade',
+          'PGR, análise ergonômica (AET – NR-17) e fatores psicossociais',
+          'Treinamentos das NRs, estruturação da CIPA e SIPAT',
+          'Assistência técnico-pericial em processos trabalhistas'
+        ])},
+        { titulo: 'Estudos e Projetos para Licenciamento', fundo: tinta, itens: num([
+          'Regularização fundiária e técnica de imóveis e condomínios',
+          'Estudos de Viabilidade Técnica e Ambiental (EVTEA)',
+          'Estudos de Impacto de Vizinhança (EIV) e viabilidade econômica',
+          'Projetos integrados para tramitação acelerada em órgãos públicos'
+        ])},
+        { titulo: 'Defesa de Multas e Passivos', fundo: tinta, itens: num([
+          'Defesa e recurso contra autos de infração ambientais, sanitários e trabalhistas',
+          'Contestação técnica e fundamentação jurídica de penalidades',
+          'Mitigação ou cancelamento de multas',
+          'Blindagem contra passivos financeiros e danos reputacionais'
+        ])},
+        { titulo: 'Inteligência e Gestão Estratégica', fundo: claro, itens: num([
+          'Auditorias internas preventivas de riscos operacionais e regulatórios',
+          'Modelagem e implementação de KPIs',
+          'Mentoria para novos negócios e estruturação de cooperativas',
+          'Comunicação política, institucional e com stakeholders'
+        ])}
+      ],
+      diferenciais: [
+        { slotId: 'dif-1', placeholder: 'Foto — reunião / consultoria', titulo: 'Solução multidisciplinar 360°', texto: 'Um único parceiro para licenciamento, segurança do trabalho, vigilância sanitária e defesa legal.' },
+        { slotId: 'dif-2', placeholder: 'Foto — indústria / campo', titulo: 'Foco em resultados e economia', texto: 'Redução real de custos tributários sobre a folha e prevenção de multas operacionais.' },
+        { slotId: 'dif-3', placeholder: 'Foto — projeto socioambiental', titulo: 'Práticas ESG com impacto real', texto: 'Conexão entre o setor corporativo e iniciativas socioambientais e cooperativas.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

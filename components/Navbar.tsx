@@ -77,7 +77,7 @@ export default function Navbar() {
                   href="#contato"
                   className="bg-gradient-to-r from-[#004d00] to-[#008801] hover:from-[#003800] hover:to-[#006801] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-brand-500/30 hover:-translate-y-px"
                 >
-                  Diagnóstico gratuito
+                  Solicitar Diagnóstico
                 </a>
               </nav>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
                   transition={{ delay: 0.28 }}
                   className="mt-4 block bg-gradient-to-r from-[#004d00] to-[#008801] text-white text-center font-semibold py-3 rounded-full"
                 >
-                  Diagnóstico gratuito
+                  Solicitar Diagnóstico
                 </motion.a>
               </motion.div>
             )}

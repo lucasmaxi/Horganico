@@ -12,7 +12,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contato" className="bg-brand-500 py-24 md:py-32">
+    <section id="contato" className="bg-brand-500 pt-16 pb-6 md:pt-24 md:pb-6">
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <motion.div
@@ -145,9 +145,9 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 pt-8 border-t border-white/20 flex flex-wrap justify-between gap-4 text-white/50 text-sm"
+          className="mt-8 pt-6 border-t border-white/20 flex flex-wrap justify-between gap-4 text-white/50 text-sm"
         >
-          <span>© 2026 Horgânico Soluções Ecológicas</span>
+          <span>© 2026 Horgânico</span>
           <span>Engenharia · Sanitário · SST · Jurídico · Gestão</span>
         </motion.footer>
       </div>
